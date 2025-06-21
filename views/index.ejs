@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App 2.0</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-cloud-sun"></i>
+            <h1>WeatherNow</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#forecast">Forecast</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="forecast">
+        <div class="search-section">
+            <h2>Check Weather Anywhere</h2>
+            <p>Enter a city name to get current weather conditions</p>
+            
+            <form action="/submit" method="post">
+                <div class="search-box">
+                    <input type="text" placeholder="Enter city name..." id="city-input" name="cityname">
+                    <button name="submit" id="search-btn">Check Weather</button>
+                </div>
+            </form>
+        </div>
+        <% if(data){ %>
+        <div class="weather-display">
+            <div class="weather-card">
+                <div class="weather-icon">
+                    <i id="weather-icon" class="fa-solid fa-cloud-sun fa-5x"></i>
+                </div>
+                <div class="location-info">
+                    <h2 class="city">City Name: <%= data.name %></h2>
+                </div>
+                <div class="weather-info">
+                    <h1 class="temperature"><%= data.main.temp %> °C</h1>
+                    <p class="weather-condition">Weather Condition: <%= data.weather[0].description %></p>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-high"></i>
+                        <div>
+                            <p>Feels Like</p>
+                            <p class="feels-like"><%= data.main.feels_like %>°F</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p>Wind</p>
+                            <p class="wind-speed"><%= data.wind.speed %> km/h</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-water"></i>
+                        <div>
+                            <p>Humidity</p>
+                            <p class="humidity"><%= data.main.humidity %> %</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+
+        <div id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-card">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle fa-6x"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Jayashish M</h3>
+                    <p class="profile-description">Weather enthusiast and developer of WeatherNow. Passionate about creating intuitive and useful applications that help people plan their day with accurate weather information.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/jayashish05" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jayashish-muppur/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 WeatherNow | Powered by OpenWeather API</p>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
