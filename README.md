@@ -77,8 +77,8 @@ weathernow/
 │   └── styles/  
 │       └── style.css  
 ├── views/  
-│   └── index.ejs
-├── index.js
+│   └── index.ejs  
+├── index.js  
 ├── package.json  
 └── README.md
 
