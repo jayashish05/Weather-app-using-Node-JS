@@ -18,100 +18,102 @@
 
 - **Frontend:** HTML, CSS, EJS, Font Awesome
 - **Backend:** Node.js, Express.js
-- **API:** [OpenWeatherMap API](https://openweathermap.org/api)
-- **Dependencies:** `express`, `axios`, `body-parser`, `ejs`
+- **API:** OpenWeatherMap API (https://openweathermap.org/api)
+- **Dependencies:** express, axios, body-parser, ejs
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
-git clone https://github.com/your-username/weathernow.git
+
+git clone https://github.com/your-username/weathernow.git  
 cd weathernow
-2. Install Dependencies
-bash
-Copy
-Edit
+
+### 2. Install Dependencies
+
 npm install
-3. Add Your OpenWeatherMap API Key
-Sign up at OpenWeatherMap and get your API key.
 
-Open app.js and replace the placeholder:
+### 3. Add Your OpenWeatherMap API Key
 
-js
-Copy
-Edit
-const apikey = "your_api_key_here";
-✅ Optional: Use a .env file for security (requires installing dotenv):
+- Sign up at https://openweathermap.org/ and get your API key.
+- Open `app.js` and replace this line:
 
-bash
-Copy
-Edit
-npm install dotenv
-Create a .env file:
+    const apikey = "your_api_key_here";
 
-ini
-Copy
-Edit
-API_KEY=your_api_key_here
-Then use in app.js:
+✅ Optional: Use a `.env` file to store the key securely:
 
-js
-Copy
-Edit
-import dotenv from "dotenv";
-dotenv.config();
-const apikey = process.env.API_KEY;
-Add .env to .gitignore to keep it private.
+1. Install dotenv:
 
-4. Run the Application
-bash
-Copy
-Edit
+    npm install dotenv
+
+2. Create a `.env` file:
+
+    API_KEY=your_api_key_here
+
+3. Then update `app.js` like this:
+
+    import dotenv from "dotenv";  
+    dotenv.config();  
+    const apikey = process.env.API_KEY;
+
+4. Make sure to add `.env` to `.gitignore` to keep it private.
+
+---
+
+### 4. Run the Application
+
 node app.js
-Then open your browser and go to:
 
-arduino
-Copy
-Edit
+Then open your browser and go to:  
 http://localhost:3000
-📁 Project Structure
-pgsql
-Copy
-Edit
-weathernow/
-├── public/
-│   └── styles/
-│       └── style.css
-├── views/
-│   └── index.ejs
-├── app.js
-├── package.json
+
+---
+
+## 📁 Project Structure
+
+weathernow/  
+├── public/  
+│   └── styles/  
+│       └── style.css  
+├── views/  
+│   └── index.ejs  
+├── app.js  
+├── package.json  
 └── README.md
-🖼️ Screenshot
-Add a screenshot of your app running here
 
-🌐 Live Demo
-If deployed, place the link below
+---
 
+## 🖼️ Screenshot
+
+_Add a screenshot of your app running here (optional)_
+
+---
+
+## 🌐 Live Demo
+
+If deployed, add the link below:  
 Example: https://weathernow-app.onrender.com
 
-📜 License
-This project is licensed under the MIT License.
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.  
 You are free to use, modify, and distribute this software with attribution.
 
-🙌 Acknowledgements
-OpenWeatherMap API
+---
 
-Font Awesome
+## 🙌 Acknowledgements
 
-EJS
+- OpenWeatherMap API
+- Font Awesome
+- EJS Templating
 
-👨‍💻 Author
-Jayashish Muppur
-🔗 LinkedIn
-💻 GitHub
+---
 
-yaml
-Copy
-Edit
+## 👨‍💻 Author
+
+**Jayashish Muppur**  
+🔗 LinkedIn: https://www.linkedin.com/in/jayashish-muppur/  
+💻 GitHub: https://github.com/jayashish05
