@@ -16,7 +16,7 @@
 
 ## 🧰 Tech Stack
 
-- **Frontend:** HTML, CSS, EJS, Font Awesome
+- **Frontend:** CSS, EJS, Font Awesome
 - **Backend:** Node.js, Express.js
 - **API:** OpenWeatherMap API (https://openweathermap.org/api)
 - **Dependencies:** express, axios, body-parser, ejs
@@ -37,7 +37,7 @@ npm install
 ### 3. Add Your OpenWeatherMap API Key
 
 - Sign up at https://openweathermap.org/ and get your API key.
-- Open `app.js` and replace this line:
+- Open `index.js` and replace this line:
 
     const apikey = "your_api_key_here";
 
@@ -51,7 +51,7 @@ npm install
 
     API_KEY=your_api_key_here
 
-3. Then update `app.js` like this:
+3. Then update `index.js` like this:
 
     import dotenv from "dotenv";  
     dotenv.config();  
@@ -63,7 +63,7 @@ npm install
 
 ### 4. Run the Application
 
-node app.js
+nodemon index.js
 
 Then open your browser and go to:  
 http://localhost:3000
@@ -77,8 +77,8 @@ weathernow/
 │   └── styles/  
 │       └── style.css  
 ├── views/  
-│   └── index.ejs  
-├── app.js  
+│   └── index.ejs
+├── index.js
 ├── package.json  
 └── README.md
 
