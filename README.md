@@ -86,7 +86,8 @@ weathernow/
 
 ## 🖼️ Screenshot
 
-_Add a screenshot of your app running here (optional)_
+<img width="1470" alt="Screenshot 2025-06-22 at 12 40 41 AM" src="https://github.com/user-attachments/assets/6e1a5dfe-a3e7-4203-82a5-8b9c5ebdd8db" />
+<img width="1470" alt="Screenshot 2025-06-22 at 12 40 47 AM" src="https://github.com/user-attachments/assets/3c40e2fe-a1c3-4e28-ba38-403be6ecb736" />
 
 ---
 
